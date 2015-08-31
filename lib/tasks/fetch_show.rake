@@ -1,6 +1,11 @@
 require 'nokogiri'
 require 'open-uri'
 namespace :imdb_fetch do
+  def get_show_link(slug)
+    suggest_link = "http://sg.media-imdb.com/suggests/#{slug.chars.first}/#{slug.chars.first(4).join}.json"
+    
+
+  end
   desc "Fetch show and episode details from imdb"
   task :show => :environment do
     base_url = "http://www.imdb.com"
