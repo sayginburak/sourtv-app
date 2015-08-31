@@ -7,7 +7,7 @@ class CreateEpisodes < ActiveRecord::Migration
       t.string :imdb_link
       t.string :imdb_point
       t.integer :season_no
-      t.belogs_to :show
+      t.belongs_to :show
 
       t.timestamps null: false
     end
