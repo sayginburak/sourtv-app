@@ -6,7 +6,7 @@ class CreateShows < ActiveRecord::Migration
       t.string :image_link
       t.string :date
       t.string :imdb_point
-      t.string :last_episode_id
+      t.integer :last_episode_id
       t.boolean :ongoing
 
       t.timestamps null: false
