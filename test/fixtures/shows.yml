@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  imdb_link: MyString
+  image_link: MyString
+  date: MyString
+  imdb_point: MyString
+  last_episode_id: MyString
+  ongoing: false
+
+two:
+  name: MyString
+  imdb_link: MyString
+  image_link: MyString
+  date: MyString
+  imdb_point: MyString
+  last_episode_id: MyString
+  ongoing: false
