@@ -11,30 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831184247) do
+ActiveRecord::Schema.define(version: 20150901212147) do
 
   create_table "episodes", force: :cascade do |t|
     t.string   "name"
     t.string   "image_link"
     t.string   "airdate"
-    t.string   "imdb_link"
+    t.string   "imdb_id"
     t.string   "imdb_point"
     t.integer  "season_no"
     t.integer  "show_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "episode_no"
   end
 
   create_table "shows", force: :cascade do |t|
     t.string   "name"
-    t.string   "imdb_link"
+    t.string   "imdb_id"
     t.string   "image_link"
-    t.string   "date"
+    t.string   "year"
     t.string   "imdb_point"
     t.integer  "last_episode_id"
     t.boolean  "ongoing"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "season_count"
   end
 
 end
