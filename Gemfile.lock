@@ -134,6 +134,10 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    yayimdbs (0.2.7)
+      activesupport
+      i18n
+      nokogiri (>= 1.4.2)
 
 PLATFORMS
   ruby
@@ -143,7 +147,6 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  nokogiri
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -152,3 +155,7 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  yayimdbs
+
+BUNDLED WITH
+   1.10.5
