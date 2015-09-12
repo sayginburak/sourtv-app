@@ -15,3 +15,7 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.img-responsive {
+  margin: 0 auto;
+}
