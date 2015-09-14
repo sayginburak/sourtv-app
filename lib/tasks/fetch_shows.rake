@@ -1,3 +1,5 @@
+require 'net/http'
+require 'uri'
 namespace :imdb_fetch do
   desc "Fetch show and episode details from imdb"
   task :show => :environment do
@@ -29,5 +31,18 @@ namespace :imdb_fetch do
         end
       end
 
+  end
+
+  desc "Save eksi links to db"
+  task :eksi => :environment do
+    base_url = "https://eksisozluk.com"
+    shows = Show.all
+    shows.each do |s|
+      url = base_url + "/" + s.name.split.join("%20").downcase
+      res = Net::HTTP.get_response(URI(url))
+      eksi_link = res['location']
+      s.eksi_link = eksi_link
+      s.save
+    end
   end
 end

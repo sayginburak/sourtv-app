@@ -1,52 +1,53 @@
-    <!-- Page Content -->
-    <div class="container">
-        <!-- Projects Row -->
-      <% @shows.each_slice(4) do |shows| %>
-        <div class="row">
-          <% shows.each do |show| %>
-            <div class="col-md-3 portfolio-item">
-            <div class="container">     
-              <div class="span12">      
-                <%= image_tag show.image_link, size:"235x348" %>
-              </div> 
-            </div>
-              <h3 class="text-center">
-                <%= show.name %>
-              </h3>
-            </div>
-          <% end %>
+<!-- Page Content -->
+<div class="container">
+    <!-- Projects Row -->
+  <% @shows.each_slice(4) do |shows| %>
+    <div class="row">
+      <% shows.each do |show| %>
+        <div class="col-md-3 portfolio-item">
+        <div class="container">     
+          <div class="span12">      
+            <%= link_to (image_tag show.image_link, size:"235x348"), show_path(show)  %>
+          </div> 
+        </div>
+          <h3 class="text-center">
+            <%= link_to show.name, show_path(show)  %>
+          </h3>
         </div>
       <% end %>
-        <!-- /.row -->
+    </div>
+  <% end %>
+    <!-- /.row -->
 
-        <hr>
+    <hr>
 
-        <!-- Pagination -->
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <ul class="pagination">
-              <li>
-                <a href="#">&laquo;</a>
-              </li>
-              <li class="active">
-                <a href="#">1</a>
-              </li>
-              <li>
-                <a href="#">2</a>
-              </li>
-              <li>
-                <a href="#">3</a>
-              </li>
-              <li>
-                <a href="#">4</a>
-              </li>
-              <li>
-                <a href="#">5</a>
-              </li>
-              <li>
-                <a href="#">&raquo;</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- /.row -->
+    <!-- Pagination -->
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <ul class="pagination">
+          <li>
+            <a href="#">&laquo;</a>
+          </li>
+          <li class="active">
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+          <li>
+            <a href="#">4</a>
+          </li>
+          <li>
+            <a href="#">5</a>
+          </li>
+          <li>
+            <a href="#">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- /.row -->
